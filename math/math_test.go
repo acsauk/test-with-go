@@ -1,10 +1,12 @@
 package math
 
 import (
-	"fmt"
 	"testing"
 )
 
 func TestSum(t *testing.T) {
-	fmt.Printf("Running tests...")
+	sum := Sum([]int{10, -2, 3})
+	if sum != 11 {
+		t.Errorf("Wanted 11, but recevied %d", sum)
+	}
 }
