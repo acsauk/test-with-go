@@ -11,4 +11,6 @@ func main() {
 		msg := fmt.Sprintf("FAIL: wanted 11, but recevied %d", sum)
 		panic(msg)
 	}
+
+	fmt.Println("PASS")
 }
