@@ -12,5 +12,11 @@ func main() {
 		panic(msg)
 	}
 
+	add := math.Add(5, 10)
+	if add != 15 {
+		msg := fmt.Sprintf("FAIL: wanted 15, but recevied %d", add)
+		panic(msg)
+	}
+
 	fmt.Println("PASS")
 }
