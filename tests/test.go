@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/acsauk/math"
+	"github.com/acsauk/test-with-go/math"
 )
 
 func main() {
