@@ -17,3 +17,20 @@ func ExampleHello() {
 	// Output:
 	// Hello, Alex
 }
+
+func ExamplePage() {
+	checkIns := map[string]bool {
+		"Alex": true,
+		"Brett": false,
+		"Tustin": true,
+		"Ziggy": false,
+		"Emma": false,
+	}
+
+	Page(checkIns)
+
+	// Unordered output:
+	// Paging Brett; please see the front desk to check in.
+	// Paging Ziggy; please see the front desk to check in.
+	// Paging Emma; please see the front desk to check in.
+}
