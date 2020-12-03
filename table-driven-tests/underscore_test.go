@@ -26,17 +26,16 @@ func TestCamel(t *testing.T) {
 	type args struct {
 		str string
 	}
-	tests := []struct {
-		name string
+	tests := map[string]struct {
 		args args
 		want string
 	}{
-		{"Simple", args{"thisIsACamelCaseString"}, "this_is_a_camel_case_string"},
-		{"Spaces", args{"with a space"}, "with a space"},
-		{"Ending with A", args{"endsWithA"}, "ends_with_a"},
+		"Simple": {args{"thisIsACamelCaseString"}, "this_is_a_camel_case_string"},
+		"Spaces": {args{"with a space"}, "with a space"},
+		"Ending with A": {args{"endsWithA"}, "ends_with_a"},
 	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
+	for name, tt := range tests {
+		t.Run(name, func(t *testing.T) {
 			if got := Camel(tt.args.str); got != tt.want {
 				t.Errorf("Camel() = %v, want %v", got, tt.want)
 			}
